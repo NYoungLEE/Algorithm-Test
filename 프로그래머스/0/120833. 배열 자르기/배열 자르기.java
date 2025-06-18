@@ -5,9 +5,7 @@ class Solution {
         
         /* int[] answer = new int[num2 - num1 + 1];
         
-        int pos = 0;
-        
-        for(int i = num1; i <= num2; i++) answer[pos++] = numbers[i];
+        for(int i = num1; i <= num2; i++) answer[i - num1] = numbers[i];
           
         return answer; */
         
