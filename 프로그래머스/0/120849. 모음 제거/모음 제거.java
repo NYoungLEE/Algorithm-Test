@@ -1,6 +1,7 @@
 class Solution {
     public String solution(String my_string) {
         
+        /* 풀이 1
         String[] str = my_string.split("");
         StringBuilder sb = new StringBuilder();
         
@@ -10,6 +11,20 @@ class Solution {
             sb.append(n);
         }
             
-        return sb.toString();
+        return sb.toString(); */
+        
+        StringBuilder sb = new StringBuilder();
+        
+        /* 풀이2
+        for (char c : my_string.toCharArray()) {
+            if (c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u') {
+                sb.append(c);
+            }
+        }
+        
+        return sb.toString(); */
+        
+        // 풀이3
+        return my_string.replaceAll("[aeiou]", "");
     }
 }
