@@ -3,6 +3,7 @@ import java.util.*;
 class Solution {
     public String solution(String my_string) {
         
+        /* 풀이1
         String answer = "";
         LinkedHashSet<String> set = new LinkedHashSet<>();
         
@@ -14,6 +15,12 @@ class Solution {
         
         answer = String.join("", set);
         
-        return answer;
+        return answer; */
+        
+        // 풀이2
+        String[] answer = my_string.split("");
+        LinkedHashSet<String> set = new LinkedHashSet<>(Arrays.asList(answer));
+        
+        return String.join("", set);
     }
 }
