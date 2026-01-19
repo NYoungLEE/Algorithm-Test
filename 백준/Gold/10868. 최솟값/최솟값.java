@@ -51,9 +51,10 @@ public class Main {
     while (s <= e) {
       if (s % 2 == 1) min = Math.min(min, tree[s++]);
       if (e % 2 == 0) min = Math.min(min, tree[e--]);
-      s = (s + 1) / 2;
-      e = (e - 1) / 2;
+      s /= 2;
+      e /= 2;
     }
     return min;
   }
+
 }
