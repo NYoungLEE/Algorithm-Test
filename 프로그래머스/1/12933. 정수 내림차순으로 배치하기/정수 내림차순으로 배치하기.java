@@ -3,13 +3,14 @@ import java.util.*;
 class Solution {
     public long solution(long n) {
         
-        String[] num = Long.toString(n).split("");
-        
-        Arrays.sort(num, Collections.reverseOrder());
+        String[] arr = Long.toString(n).split("");
+        Arrays.sort(arr, Collections.reverseOrder());
         
         StringBuilder sb = new StringBuilder();
-        for(String s : num) sb.append(s);
-        
+        for (String str : arr) {
+            sb.append(str);
+        }
+
         return Long.parseLong(sb.toString());
     }
 }
