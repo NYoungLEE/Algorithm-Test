@@ -1,10 +1,10 @@
 class Solution {
     public int[] solution(int[] arr) {
         
-        if(arr.length == 1) return new int[] {-1};
-        
+        if (arr.length == 1) return new int[] {-1};
+
         int min = arr[0];
-        int count = 0;
+        int index = 0;
         
         for (int num : arr) {
             min = Math.min(min, num);
@@ -12,10 +12,11 @@ class Solution {
         
         int[] answer = new int[arr.length - 1];
         
-        for(int i = 0; i < arr.length; i++) {
-            if(arr[i] == min) continue;
-            answer[count++] = arr[i];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == min) continue;
+            answer[index++] = arr[i];
         }
+        
         
         return answer;
     }
